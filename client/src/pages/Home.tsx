@@ -390,93 +390,123 @@ export default function Home() {
         </div>
       </section>{" "}
       {/* Client Success Stories Section */}
-      <section className="w-full bg-white px-4 md:px-8 lg:px-[100px] py-8 md:py-12 lg:py-16">
-        {" "}
-        {/* Section Header */}
-        <div className="mb-12 md:mb-16 flex flex-col items-center text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-['Open_Sans'] text-[#222222] leading-tight max-w-3xl">
-            Client <span className="text-[#fad02c]">Success</span> Stories
+      <section
+        data-loc="client/src/pages/Home.tsx:330"
+        className="w-full bg-white px-4 md:px-8 lg:px-[100px] pt-0 pb-8 md:pb-12 lg:pb-16"
+      >
+        <div
+          data-loc="client/src/pages/Home.tsx:332"
+          className="mb-12 md:mb-16 flex flex-col items-center text-center"
+        >
+          <h2
+            data-loc="client/src/pages/Home.tsx:333"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold font-['Open_Sans'] text-[#222222] leading-tight max-w-3xl"
+          >
+            Why <span className="text-[#fad02c]">Choose</span> Sunrise Digital
           </h2>
+
+          <p
+            data-loc="client/src/pages/Home.tsx:336"
+            className="text-base md:text-lg text-[#636363] font-normal font-['Montserrat'] leading-relaxed max-w-2xl mt-4"
+          >
+            Proven expertise and measurable results that drive real business
+            impact
+          </p>
         </div>
-        {/* Testimonials Carousel */}
-        <div className="flex flex-col gap-8">
-          {/* Testimonial Card */}
-          <div className="bg-[#f5f5f5] rounded-lg p-8 md:p-12 flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
-            {/* Left - Logo */}
-            <div className="flex-shrink-0 w-full lg:w-auto flex justify-center lg:justify-start">
-              <div className="w-32 h-32 md:w-40 md:h-40 bg-white rounded-lg flex items-center justify-center shadow-md">
-                {testimonials[currentTestimonialIndex].isImage ? (
-                  <img
-                    src={testimonials[currentTestimonialIndex].logo}
-                    alt={testimonials[currentTestimonialIndex].logoText}
-                    className="w-20 h-20 md:w-24 md:h-24 object-contain"
-                  />
-                ) : (
-                  <span className="text-6xl md:text-7xl">
-                    {testimonials[currentTestimonialIndex].logo}
-                  </span>
-                )}
-              </div>
+
+        <div
+          data-loc="client/src/pages/Home.tsx:342"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6"
+        >
+          {/* CARD 1 */}
+          <div
+            data-loc="client/src/pages/Home.tsx:344"
+            className="bg-[#f5f5f5] rounded-lg p-8 md:p-10 flex flex-col items-center text-center hover:shadow-lg transition-shadow"
+          >
+            <div className="mb-6">
+              <svg
+                className="w-16 h-16 text-[#222222]"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M3 13h2v8H3zm4-8h2v16H7zm4-2h2v18h-2zm4-2h2v20h-2zm4 4h2v16h-2z" />
+              </svg>
             </div>
 
-            {/* Right - Testimonial Content */}
-            <div className="flex-1 flex flex-col gap-6">
-              {/* Quote Icon */}
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-[#fad02c] rounded-full flex items-center justify-center text-xl">
-                  "
-                </div>
-              </div>
+            <h3 className="text-4xl md:text-5xl font-bold font-['Open_Sans'] text-[#222222] mb-3">
+              25+
+            </h3>
 
-              {/* Quote Text */}
-              <p className="text-base md:text-lg text-[#636363] font-normal font-['Montserrat'] leading-relaxed">
-                {testimonials[currentTestimonialIndex].quote}
-              </p>
+            <p className="text-base md:text-lg text-[#636363] font-normal font-['Montserrat'] leading-relaxed">
+              Full-Stack Solutions Delivered
+            </p>
 
-              {/* Client Info */}
-              <div className="flex flex-col gap-1">
-                <h3 className="text-lg md:text-xl font-bold font-['Montserrat'] text-[#222222]">
-                  {testimonials[currentTestimonialIndex].clientName}
-                </h3>
-                <p className="text-sm md:text-base text-[#636363] font-normal font-['Montserrat']">
-                  {testimonials[currentTestimonialIndex].clientTitle}
-                </p>
-              </div>
+            <p className="max-w-[200px] text-sm text-[#636363] font-normal font-['Montserrat'] mt-3 opacity-75">
+              Innovative solutions driving real business results
+            </p>
+          </div>
+
+          {/* CARD 2 */}
+          <div
+            data-loc="client/src/pages/Home.tsx:362"
+            className="bg-[#f5f5f5] rounded-lg p-8 md:p-10 flex flex-col items-center text-center hover:shadow-lg transition-shadow"
+          >
+            <div className="mb-6">
+              <svg
+                className="w-16 h-16 text-[#222222]"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" />
+              </svg>
             </div>
+
+            <h3 className="text-4xl md:text-5xl font-bold font-['Open_Sans'] text-[#222222] mb-3">
+              40%
+            </h3>
+
+            <p className="text-base md:text-lg text-[#636363] font-normal font-['Montserrat'] leading-relaxed">
+              Increase in Average Order Value
+            </p>
+
+            <p className="text-sm text-[#636363] font-normal font-['Montserrat'] mt-3 opacity-75">
+              Due to innovative
+              <br />
+              e-commerce solutions
+            </p>
           </div>
 
-          {/* Navigation Controls */}
-          <div className="flex justify-end gap-3">
-            <button
-              onClick={prevTestimonial}
-              className="w-10 h-10 bg-[#222222] rounded-lg flex items-center justify-center text-white hover:bg-[#333333] transition-colors"
-              aria-label="Previous testimonial"
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <button
-              onClick={nextTestimonial}
-              className="w-10 h-10 bg-[#222222] rounded-lg flex items-center justify-center text-white hover:bg-[#333333] transition-colors"
-              aria-label="Next testimonial"
-            >
-              <ChevronRight size={20} />
-            </button>
-          </div>
+          {/* CARD 3 */}
+          <div
+            data-loc="client/src/pages/Home.tsx:380"
+            className="bg-[#f5f5f5] rounded-lg p-8 md:p-10 flex flex-col items-center text-center hover:shadow-lg transition-shadow"
+          >
+            <div className="mb-6">
+              <svg
+                className="w-16 h-16 text-[#222222]"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+              </svg>
+            </div>
 
-          {/* Pagination Dots */}
-          <div className="flex justify-center gap-2 mt-6">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentTestimonialIndex(index)}
-                className={`h-2 rounded-full transition-all ${
-                  index === currentTestimonialIndex
-                    ? "bg-[#fad02c] w-8"
-                    : "bg-gray-300 w-2"
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
-            ))}
+            <h3 className="text-4xl md:text-5xl font-bold font-['Open_Sans'] text-[#222222] mb-3">
+              R100m+
+            </h3>
+
+            <p className="text-base md:text-lg text-[#636363] font-normal font-['Montserrat'] leading-relaxed">
+              Incremental Revenue Generated
+            </p>
+
+            <p className="text-sm text-[#636363] font-normal font-['Montserrat'] mt-3 opacity-75">
+              For top UK
+              <br />
+              fashion brands
+            </p>
           </div>
         </div>
       </section>
