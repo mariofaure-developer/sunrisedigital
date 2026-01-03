@@ -267,9 +267,15 @@ export default function Home() {
             <div className="absolute -top-8 -left-8 w-32 h-32 md:w-40 md:h-40 bg-[#fad02c] rounded-full opacity-80 -z-10" />
 
             <img
-              src="/images/about-us-team.jpg"
+              src="/images/about-us-team-640.webp"
+              srcSet="
+    /images/about-us-team-640.webp 640w,
+    /images/about-us-team-960.webp 960w
+  "
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 640px"
               alt="Sunrise Digital team collaborating"
               className="w-full max-w-md md:max-w-lg h-auto rounded-lg shadow-lg"
+              loading="lazy"
             />
           </div>
 
