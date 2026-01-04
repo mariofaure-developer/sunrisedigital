@@ -509,9 +509,9 @@ export default function Home() {
             </p>
 
             <p className="text-sm text-[#636363] font-normal font-['Montserrat'] mt-3 opacity-75">
-              For top UK
+              For top retail
               <br />
-              fashion brands
+              brands
             </p>
           </div>
         </div>
