@@ -705,7 +705,7 @@ export default function Home() {
                 Phone number
               </h3>
               <p className="text-base md:text-lg text-[#636363] font-normal font-['Montserrat']">
-                +44 7736 333575
+                +27 73 447 8739
               </p>
             </div>
           </div>
