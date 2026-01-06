@@ -587,19 +587,21 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Project 2 - Guardian Consulting */}
+          {/* Project 5 - Newman Birds App */}
           <div className="bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
             <img
-              src="/images/project-2-guardian.png"
-              alt="Guardian Consulting - Safeguarding website"
+              src="/images/newman.jpeg"
+              alt="..."
               className="w-full h-80 md:h-96 object-cover"
+              style={{ objectPosition: "center 65%" }} // Increase the % to move the image down (e.g., 60%, 70%, 80%)
             />
+
             <div className="p-6 md:p-8">
               <h3 className="text-xl md:text-2xl font-bold font-['Montserrat'] text-[#222222] mb-2">
-                Guardian Consulting
+                Newman Birds
               </h3>
               <p className="text-sm md:text-base text-[#636363] font-normal font-['Montserrat']">
-                Safeguarding and consulting website
+                Mobile App
               </p>
             </div>
           </div>
@@ -634,6 +636,22 @@ export default function Home() {
               </h3>
               <p className="text-sm md:text-base text-[#636363] font-normal font-['Montserrat']">
                 Full-stack mobile and web application
+              </p>
+            </div>
+          </div>
+          {/* Project 2 - Guardian Consulting */}
+          <div className="bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+            <img
+              src="/images/project-2-guardian.jpeg"
+              alt="Guardian Consulting - Safeguarding website"
+              className="w-full h-80 md:h-96 object-cover"
+            />
+            <div className="p-6 md:p-8">
+              <h3 className="text-xl md:text-2xl font-bold font-['Montserrat'] text-[#222222] mb-2">
+                Sunrise Safeguarding
+              </h3>
+              <p className="text-sm md:text-base text-[#636363] font-normal font-['Montserrat']">
+                CMS-driven safeguarding and consulting website
               </p>
             </div>
           </div>
