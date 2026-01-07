@@ -42,34 +42,36 @@ const services = [
   },
 ];
 
-const testimonials = [
+const clients = [
   {
     id: 1,
-    logo: "/images/trip-taxi-logo.png",
-    logoText: "Trip Taxi",
-    isImage: true,
-    quote:
-      "Working with Sunrise Digital was a game-changer for Trip Taxi. Their UX/UI design expertise brought our vision to life with a sleek, user-friendly app that our customers love. The team's professionalism and innovative approach made the entire process seamless.",
-    clientName: "Emily Richards",
-    clientTitle: "CEO of Trip Taxi",
+    name: "Tesco",
+    logo: "/images/logo1.png",
   },
   {
     id: 2,
-    logo: "🏢",
-    logoText: "Tech Corp",
-    quote:
-      "Sunrise Digital transformed our digital presence with their comprehensive solutions. From design to development, they delivered excellence at every step. Their team's dedication and expertise exceeded our expectations.",
-    clientName: "John Smith",
-    clientTitle: "CEO of Tech Corp",
+    name: "Boden",
+    logo: "/images/logo2.png",
   },
   {
     id: 3,
-    logo: "🎯",
-    logoText: "StartUp Inc",
-    quote:
-      "The level of professionalism and attention to detail from Sunrise Digital was outstanding. They helped us build a scalable platform that supports our rapid growth. Highly recommended!",
-    clientName: "Sarah Johnson",
-    clientTitle: "Founder of StartUp Inc",
+    name: "Merrill Lynch",
+    logo: "/images/logo5.png",
+  },
+  {
+    id: 4,
+    name: "Checkers",
+    logo: "/images/logo6.png",
+  },
+  {
+    id: 5,
+    name: "Fynarts",
+    logo: "/images/logo7.png",
+  },
+  {
+    id: 6,
+    name: "Target",
+    logo: "/images/logo8.png",
   },
 ];
 
@@ -516,41 +518,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* CTA Section */}
-      <section className="w-full bg-[#222222] px-4 md:px-8 lg:px-[100px] py-8 md:py-10 lg:py-14">
-        <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 items-center">
-          {/* Left - Illustration */}
-          <div className="flex-1 w-full flex justify-center lg:justify-start">
-            <img
-              src="/images/cta-illustration.png"
-              alt="Web design and development illustration"
-              className="w-full max-w-sm md:max-w-md lg:max-w-lg h-auto rounded-2xl"
-            />
-          </div>
-
-          {/* Right - Content */}
-          <div className="flex-1 flex flex-col gap-6 md:gap-8">
-            {/* Headline */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-['Open_Sans'] text-white leading-tight">
-              Ready <span className="text-[#fad02c]">to elevate</span> your
-              Business?
-            </h2>
-
-            {/* Description */}
-            <p className="text-base md:text-lg text-gray-300 font-normal font-['Montserrat'] leading-relaxed max-w-2xl">
-              Partner with us to unlock your business's full potential
-            </p>
-
-            {/* CTA Button */}
-            <button
-              className="w-fit px-6 md:px-8 py-2.5 bg-[#fad02c] rounded-tl-[20px] rounded-br-[20px] shadow-[0px_4px_4px_0px_rgba(34,34,34,0.10)] flex justify-center items-center gap-2.5 hover:bg-[#f5c700] transition-colors font-semibold font-['Montserrat'] text-[#222222] text-sm md:text-base"
-              aria-label="Let's Get Started"
-            >
-              Let's Get Started!
-            </button>
-          </div>
-        </div>
-      </section>
       {/* Portfolio Section */}
       <section
         id="portfolio"
@@ -559,7 +526,7 @@ export default function Home() {
         {/* Section Header */}
         <div className="mb-12 md:mb-16 flex flex-col items-center text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-['Open_Sans'] text-[#222222] leading-tight max-w-3xl">
-            Our <span className="text-[#fad02c]">Work</span>
+            Recent <span className="text-[#fad02c]">Work</span>
           </h2>
           <p className="text-base md:text-lg text-[#636363] font-normal font-['Montserrat'] leading-relaxed max-w-2xl mt-4">
             From beautifully crafted websites to intelligent automation systems,
@@ -658,6 +625,73 @@ export default function Home() {
         </div>
       </section>
       {/* Contact Information Section */}
+      {/* Client Experience Section */}
+      <section
+        id="client-experience"
+        className="w-full bg-[#f5f5f5] px-4 md:px-8 lg:px-[100px] py-8 md:py-12 lg:py-16"
+      >
+        {/* Section Header */}
+        <div className="mb-12 md:mb-16 flex flex-col items-center text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-['Open_Sans'] text-[#222222] leading-tight max-w-3xl">
+            Client <span className="text-[#fad02c]">Experience</span>
+          </h2>
+          <p className="text-base md:text-lg text-[#636363] font-normal font-['Montserrat'] leading-relaxed max-w-2xl mt-4">
+            Trusted by leading brands across retail, finance, and entertainment
+            industries
+          </p>
+        </div>
+
+        {/* Clients Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+          {clients.map(client => (
+            <div
+              key={client.id}
+              className="bg-white rounded-lg p-6 md:p-8 flex items-center justify-center hover:shadow-lg transition-shadow duration-300 min-h-[150px] md:min-h-[180px]"
+            >
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="w-full h-auto max-w-[120px] md:max-w-[140px] object-contain"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className="w-full bg-[#222222] px-4 md:px-8 lg:px-[100px] py-8 md:py-10 lg:py-14">
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 items-center">
+          {/* Left - Illustration */}
+          <div className="flex-1 w-full flex justify-center lg:justify-start">
+            <img
+              src="/images/cta-illustration.png"
+              alt="Web design and development illustration"
+              className="w-full max-w-sm md:max-w-md lg:max-w-lg h-auto rounded-2xl"
+            />
+          </div>
+
+          {/* Right - Content */}
+          <div className="flex-1 flex flex-col gap-6 md:gap-8">
+            {/* Headline */}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-['Open_Sans'] text-white leading-tight">
+              Ready <span className="text-[#fad02c]">to elevate</span> your
+              Business?
+            </h2>
+
+            {/* Description */}
+            <p className="text-base md:text-lg text-gray-300 font-normal font-['Montserrat'] leading-relaxed max-w-2xl">
+              Partner with us to unlock your business's full potential
+            </p>
+
+            {/* CTA Button */}
+            <button
+              className="w-fit px-6 md:px-8 py-2.5 bg-[#fad02c] rounded-tl-[20px] rounded-br-[20px] shadow-[0px_4px_4px_0px_rgba(34,34,34,0.10)] flex justify-center items-center gap-2.5 hover:bg-[#f5c700] transition-colors font-semibold font-['Montserrat'] text-[#222222] text-sm md:text-base"
+              aria-label="Let's Get Started"
+            >
+              Let's Get Started!
+            </button>
+          </div>
+        </div>
+      </section>
       <section
         id="contact-info"
         className="w-full bg-[#f5f5f5] px-4 md:px-8 lg:px-[100px] py-8 md:py-12 lg:py-16"
