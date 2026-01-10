@@ -46,32 +46,42 @@ const clients = [
   {
     id: 1,
     name: "Tesco",
-    logo: "/images/logo1.png",
+    logo: "/images/logo7.jpg",
   },
   {
     id: 2,
     name: "Boden",
-    logo: "/images/logo2.png",
+    logo: "/images/logo2.jpg",
   },
   {
     id: 3,
     name: "Merrill Lynch",
-    logo: "/images/logo5.png",
+    logo: "/images/logo3.jpg",
   },
   {
     id: 4,
     name: "Checkers",
-    logo: "/images/logo6.png",
+    logo: "/images/logo4.jpg",
   },
   {
     id: 5,
     name: "Fynarts",
-    logo: "/images/logo7.png",
+    logo: "/images/logo5.jpg",
   },
   {
     id: 6,
     name: "Target",
-    logo: "/images/logo8.png",
+    logo: "/images/logo6.jpg",
+  },
+  {
+    id: 7,
+    name: "Target",
+    logo: "/images/logo1.jpg",
+  },
+  {
+    id: 8,
+    name: "Target",
+    logo: "/images/logo8.jpg",
   },
 ];
 
@@ -589,7 +599,21 @@ export default function Home() {
               </p>
             </div>
           </div>
-
+          <div className="bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+            <img
+              src="/images/project-2-fashion.jpeg"
+              alt="Guardian Consulting - Safeguarding website"
+              className="w-full h-80 md:h-96 object-cover"
+            />
+            <div className="p-6 md:p-8">
+              <h3 className="text-xl md:text-2xl font-bold font-['Montserrat'] text-[#222222] mb-2">
+                AI Fashion Studio
+              </h3>
+              <p className="text-sm md:text-base text-[#636363] font-normal font-['Montserrat']">
+                Empower fashion brands with AI-driven virtual studios
+              </p>
+            </div>
+          </div>
           {/* Project 4 - Trip Taxi */}
           <div className="bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
             <img
@@ -642,7 +666,7 @@ export default function Home() {
         </div>
 
         {/* Clients Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+        <div className="grid lg:grid-cols-4 grid-cols-2 gap-6 md:gap-8 lg:gap-10">
           {clients.map(client => (
             <div
               key={client.id}
