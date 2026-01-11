@@ -2,42 +2,42 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import {
   SoftwareDevelopmentIcon,
-  FullStackDesignIcon,
-  DatabaseIcon,
-  CloudHostingIcon,
+  StrategyIcon,
+  LeadershipIcon,
+  AIIcon,
 } from "@/components/ServiceIcons";
 
 const services = [
   {
     id: 1,
     icon: SoftwareDevelopmentIcon,
-    title: "Software Development",
+    title: "Custom Software Build",
     description:
-      "Robust web and app solutions that meet your unique business needs.",
+      "Design and build custom software that combines strong UX, reliable engineering, and scalable systems together.",
     bgColor: "bg-gray-200",
   },
   {
     id: 2,
-    icon: FullStackDesignIcon,
-    title: "Full-Stack Design and Development",
+    icon: AIIcon,
+    title: "AI & Automation Build",
     description:
-      "Comprehensive solutions from front-end interfaces to robust back-end systems.",
+      "Design and integrate AI APIs to create innovative apps and systems that improve workflows, insight, and performance.",
     bgColor: "bg-[#fad02c]",
   },
   {
     id: 3,
-    icon: DatabaseIcon,
-    title: "Database Design and Development",
+    icon: StrategyIcon,
+    title: "Technology & AI Strategy",
     description:
-      "Scalable, secure, and efficient database solutions to store and manage your data.",
+      "Advise on systems, architecture, and AI adoption so you invest wisely, reduce risk, and build for long-term success.",
     bgColor: "bg-gray-200",
   },
   {
     id: 4,
-    icon: CloudHostingIcon,
-    title: "AWS & Azure Hosting Management",
+    icon: LeadershipIcon,
+    title: "Outsourced CIO / CTO / NED",
     description:
-      "Reliable cloud hosting solutions for secure and scalable infrastructure.",
+      "Provide senior technology leadership to guide strategy, governance, delivery, and sustainable growth.",
     bgColor: "bg-[#fad02c]",
   },
 ];
@@ -229,11 +229,10 @@ export default function Home() {
 
               {/* Description */}
               <p className="text-base md:text-lg text-[#636363] font-normal font-['Montserrat'] leading-relaxed max-w-2xl">
-                Empowering Brands Digitally, we craft tailored software, design
-                seamless systems, and deliver innovative digital solutions to
-                fuel your business growth. From branding to optimization, we
-                create unique digital experiences that help your business
-                thrive.
+                We build intelligent software and AI-powered systems that help
+                businesses move faster, work smarter, and scale with confidence.
+                From custom software to AI-driven platforms, we turn complex
+                ideas into practical, high-impact solutions.
               </p>
             </div>
 
@@ -273,17 +272,17 @@ export default function Home() {
         className="w-full bg-[#f5f5f5] px-4 md:px-8 lg:px-[100px] py-8 md:py-12 lg:py-16"
       >
         <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-20 items-center">
-          {/* Left Image with Yellow Accent */}
-          <div className="flex-1 relative w-full flex justify-center lg:justify-start">
+          {/* Image – moves to bottom on mobile */}
+          <div className="flex-1 relative w-full flex justify-center lg:justify-start order-2 lg:order-1">
             {/* Yellow circular accent */}
             <div className="absolute -top-8 -left-8 w-32 h-32 md:w-40 md:h-40 bg-[#fad02c] rounded-full opacity-80 -z-10" />
 
             <img
               src="/images/about-us-team-640.webp"
               srcSet="
-    /images/about-us-team-640.webp 640w,
-    /images/about-us-team-960.webp 960w
-  "
+          /images/about-us-team-640.webp 640w,
+          /images/about-us-team-960.webp 960w
+        "
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 640px"
               alt="Sunrise Digital team collaborating"
               className="w-full max-w-md md:max-w-lg h-auto rounded-lg shadow-lg"
@@ -291,8 +290,8 @@ export default function Home() {
             />
           </div>
 
-          {/* Right Content */}
-          <div className="flex-1 flex flex-col gap-6 md:gap-8">
+          {/* Content – stays first on mobile */}
+          <div className="flex-1 flex flex-col gap-6 md:gap-8 order-1 lg:order-2">
             {/* Label */}
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-[#fad02c] rounded-full" />
@@ -309,14 +308,17 @@ export default function Home() {
 
             {/* Description */}
             <p className="text-base md:text-lg text-[#636363] font-normal font-['Montserrat'] leading-relaxed">
-              At Sunrise Digital, we believe in the power of innovation to
-              transform businesses. With a passion for creativity and
-              technology, our team of experts delivers tailored solutions that
-              align with your goals. From startups to enterprises, we have
-              helped countless clients achieve success through dynamic branding,
-              seamless digital experiences, and intelligent automation.
-              Empowering Brands Digitally is at the core of what we do. Let us
-              take your business to new heights.
+              At Sunrise Digital, we work where business and technology meet. We
+              partner with founders, leaders, and teams to understand how their
+              organisations really run — then design systems that make everyday
+              work simpler, clearer, and more effective.
+              <br></br>
+              <br></br>
+              We focus on people first. That means building user-friendly
+              software, choosing practical tools (not just trendy ones), and
+              using AI only where it truly adds value. Our role is to help you
+              make smart decisions and build systems that support how your
+              business actually works.
             </p>
           </div>
         </div>
@@ -365,13 +367,11 @@ export default function Home() {
           </div>
 
           {/* Controls */}
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-6 mt-8">
-            {/* View All Services Button */}
+          {/* <div className="flex flex-col sm:flex-row justify-between items-center gap-6 mt-8">
             <button className="px-6 md:px-8 py-2.5 border border-[#222222] rounded-lg font-semibold font-['Montserrat'] text-[#222222] text-sm md:text-base hover:bg-[#222222] hover:text-white transition-colors">
               View All Services
             </button>
 
-            {/* Navigation Arrows */}
             <div className="flex gap-3">
               <button
                 onClick={prevService}
@@ -388,10 +388,10 @@ export default function Home() {
                 <ChevronRight size={20} />
               </button>
             </div>
-          </div>
+          </div> */}
 
           {/* Pagination Dots */}
-          <div className="flex justify-center gap-2 mt-6">
+          {/* <div className="flex justify-center gap-2 mt-6">
             {services.map((_, index) => (
               <button
                 key={index}
@@ -404,7 +404,7 @@ export default function Home() {
                 aria-label={`Go to service ${index + 1}`}
               />
             ))}
-          </div>
+          </div> */}
         </div>
       </section>{" "}
       {/* Client Success Stories Section */}
@@ -457,11 +457,11 @@ export default function Home() {
             </h3>
 
             <p className="text-base md:text-lg text-[#636363] font-normal font-['Montserrat'] leading-relaxed">
-              Full-Stack Solutions Delivered
+              Projects Delivered
             </p>
 
             <p className="max-w-[200px] text-sm text-[#636363] font-normal font-['Montserrat'] mt-3 opacity-75">
-              Innovative solutions driving real business results
+              Practical technology that helps businesses grow
             </p>
           </div>
 
@@ -539,9 +539,9 @@ export default function Home() {
             Recent <span className="text-[#fad02c]">Work</span>
           </h2>
           <p className="text-base md:text-lg text-[#636363] font-normal font-['Montserrat'] leading-relaxed max-w-2xl mt-4">
-            From beautifully crafted websites to intelligent automation systems,
-            we're proud to showcase the results of our collaboration with
-            forward-thinking businesses
+            From custom websites and apps to intelligent automation systems,
+            we’re proud to showcase what we’ve built with forward-thinking
+            teams.
           </p>
         </div>
 
@@ -584,7 +584,7 @@ export default function Home() {
           </div>
 
           {/* Project 3 - TaxiCode */}
-          <div className="bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+          {/* <div className="bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
             <img
               src="/images/project-3-taxicode.png"
               alt="TaxiCode - Ride booking platform"
@@ -598,7 +598,7 @@ export default function Home() {
                 Real-time location and booking platform
               </p>
             </div>
-          </div>
+          </div> */}
           <div className="bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
             <img
               src="/images/project-2-fashion.jpeg"
@@ -631,7 +631,7 @@ export default function Home() {
             </div>
           </div>
           {/* Project 2 - Guardian Consulting */}
-          <div className="bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+          {/* <div className="bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
             <img
               src="/images/project-2-guardian.jpeg"
               alt="Guardian Consulting - Safeguarding website"
@@ -645,7 +645,7 @@ export default function Home() {
                 CMS-driven safeguarding and consulting website
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
       {/* Contact Information Section */}
@@ -660,8 +660,7 @@ export default function Home() {
             Client <span className="text-[#fad02c]">Experience</span>
           </h2>
           <p className="text-base md:text-lg text-[#636363] font-normal font-['Montserrat'] leading-relaxed max-w-2xl mt-4">
-            Trusted by leading brands across retail, finance, and entertainment
-            industries
+            Trusted by leading brands across retail, finance, and enterprise
           </p>
         </div>
 
@@ -697,13 +696,14 @@ export default function Home() {
           <div className="flex-1 flex flex-col gap-6 md:gap-8">
             {/* Headline */}
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-['Open_Sans'] text-white leading-tight">
-              Ready <span className="text-[#fad02c]">to elevate</span> your
-              Business?
+              Build smarter.
+              <span className="text-[#fad02c]">Grow faster.</span>
             </h2>
 
             {/* Description */}
             <p className="text-base md:text-lg text-gray-300 font-normal font-['Montserrat'] leading-relaxed max-w-2xl">
-              Partner with us to unlock your business's full potential
+              Partner with us to build software and AI that move your business
+              forward.
             </p>
 
             {/* CTA Button */}
