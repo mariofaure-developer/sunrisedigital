@@ -229,10 +229,9 @@ export default function Home() {
 
               {/* Description */}
               <p className="text-base md:text-lg text-[#636363] font-normal font-['Montserrat'] leading-relaxed max-w-2xl">
-                We build intelligent software and AI-powered systems that help
-                businesses move faster, work smarter, and scale with confidence.
-                From custom software to AI-driven platforms, we turn complex
-                ideas into practical, high-impact solutions.
+                We build software and AI systems that unlock speed, efficiency,
+                and scale. From custom builds to end-to-end platforms, we turn
+                complex ideas into solutions that deliver real business impact.
               </p>
             </div>
 
